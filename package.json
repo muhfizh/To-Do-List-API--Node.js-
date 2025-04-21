@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "docenv": "^2.0.6",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "node": "^23.11.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "chai-http": "^5.1.1",
+    "mocha": "^11.1.0"
+  }
+}
