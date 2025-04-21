@@ -8,8 +8,6 @@ const {
     getAllUsers,
     registerUser,
     loginUser
-
-
 } = require("../controller/controller");
 const routes = express.Router();
 
