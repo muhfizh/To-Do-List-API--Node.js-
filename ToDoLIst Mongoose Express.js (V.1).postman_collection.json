@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "586dcd32-09ee-404e-be31-fdaaebb10ea3",
+		"name": "ToDoLIst Mongoose Express.js (V.1)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21143061"
+	},
+	"item": [
+		{
+			"name": "Get All To Do List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQ1MjE4NDQyMzMwLCJ1c2VybmFtZSI6Im11aGZpemgiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTc0NTIxODQ0Mn0.O6NVHFCvwcS_ryX60inA5fX6usYzIKL3_OsW7bGOTQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get To Do List By ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQ1MjE4NDQyMzMwLCJ1c2VybmFtZSI6Im11aGZpemgiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTc0NTIxODQ0Mn0.O6NVHFCvwcS_ryX60inA5fX6usYzIKL3_OsW7bGOTQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/6800b246b3c4ff4cb445fb8b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						"6800b246b3c4ff4cb445fb8b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create To Do List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQ1MjE4NDQyMzMwLCJ1c2VybmFtZSI6Im11aGZpemgiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTc0NTIxODQ0Mn0.O6NVHFCvwcS_ryX60inA5fX6usYzIKL3_OsW7bGOTQU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"Buat Project Crud Backend\",\r\n    \"deskripsi\" : \"Buat Project CRUD To Do List dengan Express.js dan mongoose\",\r\n    \"status\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update To Do List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQ1MjE4NDQyMzMwLCJ1c2VybmFtZSI6Im11aGZpemgiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTc0NTIxODQ0Mn0.O6NVHFCvwcS_ryX60inA5fX6usYzIKL3_OsW7bGOTQU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/6800b246b3c4ff4cb445fb8b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						"6800b246b3c4ff4cb445fb8b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete To Do List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQ1MjE4NDQyMzMwLCJ1c2VybmFtZSI6Im11aGZpemgiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTc0NTIxODQ0Mn0.O6NVHFCvwcS_ryX60inA5fX6usYzIKL3_OsW7bGOTQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/6800b27eb3c4ff4cb445fb8e?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						"6800b27eb3c4ff4cb445fb8e"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQ1MjE4NDQyMzMwLCJ1c2VybmFtZSI6Im11aGZpemgiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTc0NTIxODQ0Mn0.O6NVHFCvwcS_ryX60inA5fX6usYzIKL3_OsW7bGOTQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"muhfizh\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"muhfizh\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2424/api/ToDoList/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2424",
+					"path": [
+						"api",
+						"ToDoList",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
