@@ -8,6 +8,7 @@ RESTful API sederhana untuk mengelola daftar tugas (to-do list) menggunakan **No
 - Struktur folder terorganisir (`controller/`, `model/`, `routes/`, `service/`)
 - Menggunakan Express.js sebagai framework utama
 - Mendukung konfigurasi environment menggunakan `.env`
+- menggunakan JWT Token untuk authentifikasi
 
 ## 📁 Struktur Proyek
 
