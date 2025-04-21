@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "docenv": "^2.0.6",
     "express": "^5.1.0",
