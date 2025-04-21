@@ -1,10 +1,8 @@
 const ToDoListModel = require("../model/model");
 const UserModel = require("../model/userModel");
-const jwt = reuire("jsonwebtoken");
-
 
 // get all users
-exports.getAllUsers = async () => {
+exports.getAllUser = async () => {
     return await UserModel.find();
 };
 

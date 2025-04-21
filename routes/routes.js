@@ -5,14 +5,14 @@ const {
     CreateToDoList,
     UpdateToDoList,
     DeleteToDoList,
-    getAllUsers,
+    getAllUser,
     registerUser,
     loginUser
 } = require("../controller/controller");
 const routes = express.Router();
 
 
-routes.route("/users").get(getAllUsers).post(registerUser);
+routes.route("/users").get(getAllUser).post(registerUser);
 routes.route("/login").post(loginUser);
 routes.route("/").get(getAllToDoList).post(CreateToDoList);
 routes.route("/:id").get(getToDoListById).put(UpdateToDoList).delete(DeleteToDoList);

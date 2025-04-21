@@ -1,14 +1,28 @@
 const services = require("../service/service");
 const jwt = require("jsonwebtoken");
 
-
+require('dotenv').config;
 
 // get all user
 exports.getAllUser = async (req, res) => {
     try {
-        const user = await services.getAllUser();
-        res.json({data: user, status: "Success"});
-        console.log("Get Progress");
+        let tokenHeaderKey = process.env.TOKEN_HEADER_KEY;
+        let jwtSecretKey = process.env.JWT_SECRET_KEY;
+    
+        const token = req.header(tokenHeaderKey);
+        const verified = jwt.verify(token, jwtSecretKey);
+        if (verified) {
+            try{
+                const user = await services.getAllUser();
+                res.json({data: user, status: "Success"});
+                console.log("Get Progress");
+            } catch (error) {
+                return res.status(500).send({message: 'gagal simpan !', error: error.message });
+                console.log(req.path || ' ' || req.method);
+            };
+        } else {
+            return res.status(401).send(error);
+        }
     } catch (err) {
         res.status(500).json({error: err.message});
     }
@@ -39,8 +53,11 @@ exports.loginUser = async (req, res) => {
             password: user.password
         }
         let token = jwt.sign(data, jsonwebtoken);
-        res.status(200).send(token);
-        res.json({data: user, status: "Success"});
+        res.status(200).json({
+            token: token,
+            data: user,
+            status: "Success"
+        });
         console.log("Login Progress");
     } catch (err) {
         res.status(500).json({error: err.message});
